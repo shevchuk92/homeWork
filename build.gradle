@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.8.0"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'net.ukr.automation'
+version '0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testImplementation("io.github.bonigarcia:webdrivermanager:3.7.1")
+    testImplementation 'com.github.appium:java-client:7.2.0'
+}
